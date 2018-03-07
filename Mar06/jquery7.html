@@ -1,0 +1,43 @@
+<!-- download jquery.com download compressed ^C ^S save in root folder -->
+<!-- jquery command elements log view -->
+<!-- jquery.com learning centre -->
+<!-- animation -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// var rec = [100,200,300,400];
+			var rec = {name:"Ajay",Age:20,gender:"Male"}
+			// console.log(rec);
+			$.each(rec,function(key,value){
+				// console.log(key);
+				// console.log(value);
+			});
+			$(".btn").click(function(){
+				width = 100;
+				$(".div").each(function(key,value){
+					// console.log(key);
+					// console.log(value);
+					ans = $(this).width();    
+					// console.log(ans);
+					newwidth = ans+width;
+					$(this).width(newwidth);
+				})
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<style type="text/css">div{width:100px;border:1px solid;}</style>
+	<button class="btn">Enter</button>
+	<div class="div">test</div>
+	<div class="div">test</div>
+	<div class="div">test</div>
+	<div class="div">test</div>
+</body>
+</html>
